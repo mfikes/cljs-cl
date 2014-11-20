@@ -8,4 +8,5 @@
   :plugins [[lein-cljsbuild "1.0.3"]]
   :cljsbuild {:builds {:rel {:source-paths ["src"]
                              :compiler {:output-to     "js/main.js"
+                                        :externs       ["externs.js"]
                                         :optimizations :advanced}}}})
