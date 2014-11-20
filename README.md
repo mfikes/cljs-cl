@@ -38,5 +38,5 @@ Both of the above should produce the output
 (0 1 1 2 3 5 8 13 21 34)
 ```
 
-I timed both, using `time` on a Mac, and the ClojureScript version is a bit faster for me, running in 0.348 seconds, while the ClojureVersion takes 1.132 seconds.
+I timed both, using `time` on a Mac, and the ClojureScript version is a bit faster for me, running in 0.348 seconds, while the Clojure version takes 1.132 seconds.
 
