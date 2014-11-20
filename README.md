@@ -40,3 +40,5 @@ Both of the above should produce the output
 
 I timed both, using `time` on a Mac, and the ClojureScript version is a bit faster for me, running in 0.348 seconds, while the Clojure version takes 1.132 seconds.
 
+As a comparison, I tried the same using `jrunscript js/main.js` and while it produces the same result, it takes 1.363 seconds.
+
