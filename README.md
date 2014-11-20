@@ -19,9 +19,24 @@ I was curious as to whether this same approach could be used to produce Clojure 
 Running
 =======
 
-To run the ClojureScript code, first download Rhino so that you have a copy of `js.jar` available.
+To run the ClojureScript code, first download Rhino so that you have a copy of `js.jar` available. Then:
 
-1. `cd` into the ClojureScript directory.
+1. `cd` into the `ClojureScript/print-fibs` directory of this repo.
 2. Compile the ClojureScript to JavaScript with `lein cljsbuild once rel`.
 3. Compile the JavaScript to Java bytecode with `java -cp /path/to/js.jar org.mozilla.javascript.tools.jsc.Main js/main.js`.
 4. Run the resulting bytecode with `java -cp /path/to/js.jar:js main`
+
+
+To run the Clojure code:
+
+1. `cd` into the `Clojure/print-fibs` directory of this repo.
+2. Create a JAR using `lein uberjar` 
+3. Run the JAR using `java -jar target/print-fibs-0.1.0-SNAPSHOT-standalone.jar`.
+
+Both of the above should produce the output 
+```
+(0 1 1 2 3 5 8 13 21 34)
+```
+
+I timed both, using `time` on a Mac, and the ClojureScript version is a bit faster for me, running in 0.348 seconds, while the ClojureVersion takes 1.132 seconds.
+
