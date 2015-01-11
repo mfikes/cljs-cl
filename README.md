@@ -40,6 +40,9 @@ Both of the above should produce the output
 
 I timed both, using `time` on a Mac, and the ClojureScript version is a bit faster for me, running in 0.348 seconds, while the Clojure version takes 1.132 seconds.
 
+JavaScript Engines
+==================
+
 As a comparison, I tried the same using Nashorn's `jrunscript js/main.js` and while it produces the same result, it takes 1.363 seconds.
 
 Node, on the other hand is much much faster. If you revise the ClojureScript source to simply `(enable-console-print!)` instead of setting `*print-fn*` to work with Java's `System.out.print`, recompile and run again, I get a time of 0.090 seconds (about 3.8 times faster than the ClojureScript->Bytecode version) when running `node js/main.js`.
