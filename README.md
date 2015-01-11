@@ -47,4 +47,4 @@ As a comparison, I tried the same using Nashorn's `jrunscript js/main.js` and wh
 
 Node, on the other hand is much much faster. If you revise the ClojureScript source to simply `(enable-console-print!)` instead of setting `*print-fn*` to work with Java's `System.out.print`, recompile and run again, I get a time of 0.090 seconds (about 3.8 times faster than the ClojureScript->Bytecode version) when running `node js/main.js`.
 
-If you use JavaScriptCore, you can get down to 0.034 s. To get `jsc` to print, I used `(set! cljs.core/*print-fn* js/debug)`, and ran things using `node jsc/main.js`.
+If you use JavaScriptCore, you can get down to 0.034 s. To get `jsc` to print, I used `(set! cljs.core/*print-fn* js/debug)`, and ran things using `jsc jsc/main.js`.
